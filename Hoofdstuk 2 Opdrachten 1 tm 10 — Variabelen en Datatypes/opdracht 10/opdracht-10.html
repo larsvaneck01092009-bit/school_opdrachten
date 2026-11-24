@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 10 - Datatypes</title>
+</head>
+<body>
+    <h1>Opdracht 10: prompt en datatypes</h1>
+    <p>Voer bijvoorbeeld 42, hallo of true in. Vernieuw de pagina om een andere invoer te testen.</p>
+
+    <script>
+        const userInput = prompt("Voer iets in:");
+        const userType = typeof userInput;
+
+        alert("Je hebt een " + userType + " ingevoerd");
+
+        // prompt() geeft ingevoerde tekst altijd als string terug.
+        // Daarom zijn 42 en true die je intypt ook strings, net als hallo.
+        if (userInput === null) {
+            // Annuleren geeft null terug. typeof null is door een historische eigenaardigheid "object".
+            alert("Je hebt op Annuleren geklikt. De waarde is null en typeof geeft object.");
+        } else {
+            const numberInput = Number(userInput);
+            alert("Omgezet naar een getal: " + numberInput + " (type: " + typeof numberInput + ")");
+        }
+    </script>
+</body>
+</html>
