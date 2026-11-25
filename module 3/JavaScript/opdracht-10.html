@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+</head>
+<body>
+  <h1>Opdracht 10: Eerste DOM-manipulatie</h1>
+  <div id="resultaat"></div>
+
+  <script>
+
+    let product = "Laptop";
+    let prijs = 899;
+
+    let element = document.getElementById("resultaat");
+    element.innerHTML = `De ${product} kost €${prijs}`;
+    element.style.color = "red";
+    element.style.fontSize = "24px";
+  </script>
+</body>
+</html>
