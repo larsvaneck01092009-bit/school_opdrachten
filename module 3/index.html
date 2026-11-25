@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Systeem</title>
+</head>
+<body>
+    <h1>Login Systeem</h1>
+    <form>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="button" onclick="login()">Login</button>
+    </form>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'admin' && password === 'admin123') {
+                alert('Welkom administrator!');
+            } else if (username === 'user' && password === 'password') {
+                alert('Welkom gebruiker!');
+            } else {
+                alert('Username of password incorrect');
+            }
+        }
+       
+    </script>
+</body>
+</html>
